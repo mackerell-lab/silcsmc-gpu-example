@@ -11,3 +11,5 @@ silcs_mc.py [-h] [-v] [-s FILE] [--struct_format [SDF|MOL2]] [-o FILE]
                    parameter_file
 ```
 
+### Example
+This is an example of silcs-mc-gpu Monte Carlo and genetic algorithm applied to the thrombin system.
