@@ -1,0 +1,66 @@
+! input file; use ! or # for skipping lines
+
+#####################################################################
+SILCS_RULES  $SILCSBIODIR_mc/data/silcs/silcs_classification_rules_2021_generic_apolar_scale_halogen_1e.dat
+CGENFF_RULES $SILCSBIODIR_mc/data/cgenff/cgenff.rules
+CGENFF_PAR   $SILCSBIODIR_mc/data/cgenff/par_all36_cgenff.prm
+GFE_CAP  3.0
+
+MINIMIZE_INPUT false
+MINIMIZE_BFGS false
+MIN_STEPS 10000
+
+MC_MOVE_RANGE  1.0  180.0  180.0
+MC_STEPS 10000
+
+SIM_ANNEAL_MOVE_RANGE  0.2 9.0 9.0
+SIM_ANNEAL_STEPS  40000
+
+DELTAE_TOLERANCE 0.5
+TOT_RUNS 250
+DELTA_LGFE_BUFF 10.0
+SILCS_LGFE_NORMALIZE false
+RANDOM_SEED true
+#####################################################################
+
+RANDOM_INIT_ORIENT true    ! false to use starting orientation
+                           ! true to randomize orientation
+
+SIMULATION_CENTER 17.257 -12.722 22.438
+SIMULATION_RADIUS 5
+
+!FORMAT OF SPECIFYING MAPS: SILCSMAP  <TYPE>  <FILENAME>
+SILCSMAP BENC /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.apolar.gfe.map 0.167
+SILCSMAP PRPC /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.apolar.gfe.map 0.333
+SILCSMAP MEOO /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.meoo.gfe.map   1.000
+SILCSMAP FORN /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.forn.gfe.map   1.000
+SILCSMAP FORO /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.foro.gfe.map   1.000
+SILCSMAP FORC /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.forc.gfe.map   1.000
+SILCSMAP MAMC /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.mamn.gfe.map   1.000
+SILCSMAP MAMN /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.mamn.gfe.map   1.000
+SILCSMAP ACEC /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.acec.gfe.map   1.000
+SILCSMAP IMIN /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.imin.gfe.map   1.000
+SILCSMAP IMIH /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.iminh.gfe.map  1.000
+SILCSMAP GEND /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.hbdon.gfe.map  1.000
+SILCSMAP GENA /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.hbacc.gfe.map  1.000
+SILCSMAP GEHC /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.gehc.gfe.map   0.333
+SILCSMAP DMEO /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.dmeo.gfe.map   1.000
+SILCSMAP FETX /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.fetx.gfe.map   1.000
+SILCSMAP TFEC /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.tfec.gfe.map   1.000
+SILCSMAP CLEX /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.clex.gfe.map   1.000
+SILCSMAP FLBX /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.flbx.gfe.map   1.000
+SILCSMAP CLBX /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.clbx.gfe.map   1.000
+SILCSMAP BRBX /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.brbx.gfe.map   1.000
+SILCSMAP EXCL /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.excl.map       1.000
+SILCSMAP NCLA /home/zhaomt/silcs/test114/silcs-mc-validation_ga40/thrombin/thrombin_mc/maps/2zff.zero.map       1.000
+
+GA_NUM 40
+GA_MOVE_RANGE  1.0  180.0  180.0
+GA_STEPS 500
+
+RADIUS_ROOT 2
+
+SIMULATION_GA false
+
+
+TOT_WRITE 50
